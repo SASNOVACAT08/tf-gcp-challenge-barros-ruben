@@ -1,16 +1,16 @@
-variable "bucket_name" {
+variable "storage_name" {
   type = string
 }
 
-variable "bucket_location" {
+variable "storage_location" {
   type = string
 }
 
-variable "bucket_file_name" {
+variable "storage_file_name" {
   type = string
 }
 
-variable "bucket_path" {
+variable "storage_path" {
   type = string
 }
 
