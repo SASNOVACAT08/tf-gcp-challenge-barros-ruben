@@ -18,7 +18,8 @@ Dans le dossier `src`, on retrouve le code de notre fonction qu\'on va déployer
 
 Attention, il faut avoir un compte GCP et avoir créé un projet. De plus, vous devez avoir les droits pour créer des ressources dans ce projet.
 
-Il faudra aussi mettre à la racine un fichier credentials.json avec les credentials de votre compte GCP.
+Il faudra mettre à la racine un fichier credentials.json avec les credentials de votre compte GCP.
+Il faudra aussi mettre le bonne nom de projet dans les fichiers `provider.tf`.
 
 Vous pouvez modifier les valeurs dans le `var.tfvars` pour changer les valeurs par défaut.
 

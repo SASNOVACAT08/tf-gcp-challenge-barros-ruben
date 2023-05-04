@@ -10,6 +10,10 @@ variable "description" {
   type = string
 }
 
+variable "location" {
+  type = string
+}
+
 variable "table_id" {
   type = string
 }

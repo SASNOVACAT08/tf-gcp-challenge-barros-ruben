@@ -1,3 +1,4 @@
+// On crée une cloud function qui va chercher le code dans un bucket
 resource "google_cloudfunctions_function" "function" {
   name        = var.name
   description = var.description
@@ -12,6 +13,7 @@ resource "google_cloudfunctions_function" "function" {
   entry_point                  = var.entry_point
 }
 
+// On donne le droit à tout le monde d'appeler la cloud function
 resource "google_cloudfunctions_function_iam_member" "invoker" {
   project        = google_cloudfunctions_function.function.project
   region         = google_cloudfunctions_function.function.region

@@ -42,6 +42,10 @@ variable "big_query_description" {
   type = string
 }
 
+variable "big_query_location" {
+  type = string
+}
+
 variable "big_query_table_id" {
   type = string
 }
