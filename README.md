@@ -7,7 +7,7 @@
 - Les noms des variables doivent être en minuscule
 - Les noms des variables doivent être séparés par des tirets du bas
 - Dans un module, le nom des variables doit être explicite au module
-- En dehors d\'un module, le nom des variables doit faire référence au module auquel elles sont liées (ex: `bucket_name` pour la variable `name` de bucket)
+- En dehors d\'un module, le nom des variables doit faire référence au module auquel elles sont liées (ex: `storage_name` pour la variable `name` de storage)
 
 ## Explication de l\'architecture
 
