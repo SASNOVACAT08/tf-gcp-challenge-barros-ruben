@@ -37,3 +37,7 @@ module "biq_query" {
   location = var.big_query_location
   table_id = var.big_query_table_id
 }
+
+module "stack_driver" {
+  source = "./modules/stack_driver"
+}
