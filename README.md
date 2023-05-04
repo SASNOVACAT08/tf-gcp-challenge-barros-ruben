@@ -18,6 +18,11 @@ Dans le dossier `src`, on retrouve le code de notre fonction qu\'on va déployer
 
 Attention, il faut avoir un compte GCP et avoir créé un projet. De plus, vous devez avoir les droits pour créer des ressources dans ce projet.
 
+Ne pas oublier d'activer les API suivantes:
+  - Cloud Functions API
+  - Cloud Run API
+  - Cloud Build API
+
 Il faudra mettre à la racine un fichier credentials.json avec les credentials de votre compte GCP.
 Il faudra aussi mettre le bonne nom de projet dans les fichiers `provider.tf`.
 
