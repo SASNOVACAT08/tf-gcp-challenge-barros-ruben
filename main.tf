@@ -3,16 +3,16 @@ module "storage" {
   source = "./modules/storage"
 
   // On passe les variables au module storage
-  name = var.bucket_name
-  location = var.bucket_location
-  file_name = var.bucket_file_name
-  path = var.bucket_path
+  name = var.storage_name
+  location = var.storage_location
+  file_name = var.storage_file_name
+  path = var.storage_path
 }
 
 // On crée le module cloud_function
 module "cloud_function" {
   source = "./modules/cloud_function"
-  depends_on = [ module.bucket ]
+  depends_on = [ module.storage ]
 
   // On passe les variables au module cloud_function
   name = var.cloud_function_name
@@ -20,9 +20,8 @@ module "cloud_function" {
   runtime = var.cloud_function_runtime
 
   // On passe les variables du module storage afin que si le nom du bucket lors de la création du module storage est modifié alors la variable soit bonne
-  bucket_name = module.bucket.bucket_name
-  archive_name = module.bucket.archive_name
-
+  bucket_name = module.storage.storage_bucket_name
+  archive_name = module.storage.storage_archive_name
 
   entry_point = var.cloud_function_entry_point
 }
